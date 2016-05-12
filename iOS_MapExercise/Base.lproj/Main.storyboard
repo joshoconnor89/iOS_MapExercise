@@ -30,6 +30,9 @@
                                 <state key="normal" title="My Locations">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showMyLocations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnH-jj-5fi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-m1-Tjp">
                                 <rect key="frame" x="0.0" y="64" width="300" height="57"/>
@@ -37,6 +40,9 @@
                                 <state key="normal" title="Save Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePinToParse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytJ-Pc-Cz9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -66,11 +72,87 @@
                         <outlet property="mapView" destination="szm-w7-fIh" id="1Ka-TL-B8U"/>
                         <outlet property="myLocationsButton" destination="sDP-gt-10K" id="ZPR-rh-bEv"/>
                         <outlet property="saveLocationButton" destination="0Sp-m1-Tjp" id="sFQ-Nl-gJX"/>
+                        <segue destination="Ue2-X7-qjO" kind="show" identifier="showDetails" id="GwF-My-yPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="357"/>
+        </scene>
+        <!--Details Table View-->
+        <scene sceneID="T0I-KW-CTy">
+            <objects>
+                <viewController id="Ue2-X7-qjO" customClass="DetailsTableView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vLh-Cj-bLo"/>
+                        <viewControllerLayoutGuide type="bottom" id="PKM-i5-qMF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fj7-X2-koi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ezX-Yg-nLn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailsCell" id="hM8-td-Vye" customClass="DetailsCell">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hM8-td-Vye" id="WLv-LE-ZMb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-0p-W2G">
+                                                    <rect key="frame" x="28" y="8" width="36" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5si-m0-gjg">
+                                                    <rect key="frame" x="90" y="8" width="97" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qY4-I1-gRQ">
+                                                    <rect key="frame" x="200" y="8" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-R3-oqB">
+                                                    <rect key="frame" x="281" y="8" width="63" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="qJw-R3-oqB" id="GeX-ce-Yg0"/>
+                                            <outlet property="dateLabel" destination="qPb-0p-W2G" id="gpX-0T-sgq"/>
+                                            <outlet property="latitudeLabel" destination="5si-m0-gjg" id="x5E-mY-fbg"/>
+                                            <outlet property="longitudeLabel" destination="qY4-I1-gRQ" id="Dyh-wg-xlk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PKM-i5-qMF" firstAttribute="top" secondItem="ezX-Yg-nLn" secondAttribute="bottom" id="7HM-iw-alF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ezX-Yg-nLn" secondAttribute="trailing" constant="-20" id="UlL-Up-1OA"/>
+                            <constraint firstItem="ezX-Yg-nLn" firstAttribute="leading" secondItem="Fj7-X2-koi" secondAttribute="leadingMargin" constant="-20" id="x02-oS-RgN"/>
+                            <constraint firstItem="ezX-Yg-nLn" firstAttribute="top" secondItem="Fj7-X2-koi" secondAttribute="topMargin" id="zOV-je-Lox"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ezX-Yg-nLn" id="fn9-3x-XHY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71k-V4-nGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872" y="357"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s6P-X4-gID">

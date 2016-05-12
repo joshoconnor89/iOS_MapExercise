@@ -15,6 +15,8 @@
 		03419B371CE4FC9B00596239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03419B351CE4FC9B00596239 /* LaunchScreen.storyboard */; };
 		03419B421CE4FC9B00596239 /* iOS_MapExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03419B411CE4FC9B00596239 /* iOS_MapExerciseTests.m */; };
 		03419B4D1CE4FC9B00596239 /* iOS_MapExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03419B4C1CE4FC9B00596239 /* iOS_MapExerciseUITests.m */; };
+		03BEC1AB1CE53104002ED611 /* DetailsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEC1AA1CE53104002ED611 /* DetailsTableView.m */; };
+		03BEC1AE1CE53163002ED611 /* DetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEC1AD1CE53163002ED611 /* DetailsCell.m */; };
 		03CED27E1CE50A1D00E9D39F /* PinDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED27D1CE50A1D00E9D39F /* PinDetails.m */; };
 		03CED2811CE50BDE00E9D39F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED2801CE50BDE00E9D39F /* MapViewController.m */; };
 		03CED2831CE50D5100E9D39F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CED2821CE50D5100E9D39F /* MapKit.framework */; };
@@ -54,6 +56,10 @@
 		03419B481CE4FC9B00596239 /* iOS_MapExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_MapExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03419B4C1CE4FC9B00596239 /* iOS_MapExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_MapExerciseUITests.m; sourceTree = "<group>"; };
 		03419B4E1CE4FC9B00596239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03BEC1A91CE53104002ED611 /* DetailsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableView.h; sourceTree = "<group>"; };
+		03BEC1AA1CE53104002ED611 /* DetailsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableView.m; sourceTree = "<group>"; };
+		03BEC1AC1CE53163002ED611 /* DetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsCell.h; sourceTree = "<group>"; };
+		03BEC1AD1CE53163002ED611 /* DetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsCell.m; sourceTree = "<group>"; };
 		03CED27C1CE50A1D00E9D39F /* PinDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinDetails.h; sourceTree = "<group>"; };
 		03CED27D1CE50A1D00E9D39F /* PinDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinDetails.m; sourceTree = "<group>"; };
 		03CED27F1CE50BDE00E9D39F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -178,6 +184,10 @@
 			children = (
 				03CED27F1CE50BDE00E9D39F /* MapViewController.h */,
 				03CED2801CE50BDE00E9D39F /* MapViewController.m */,
+				03BEC1A91CE53104002ED611 /* DetailsTableView.h */,
+				03BEC1AA1CE53104002ED611 /* DetailsTableView.m */,
+				03BEC1AC1CE53163002ED611 /* DetailsCell.h */,
+				03BEC1AD1CE53163002ED611 /* DetailsCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -385,6 +395,8 @@
 				03CED27E1CE50A1D00E9D39F /* PinDetails.m in Sources */,
 				03CED2811CE50BDE00E9D39F /* MapViewController.m in Sources */,
 				03419B291CE4FC9B00596239 /* AppDelegate.m in Sources */,
+				03BEC1AB1CE53104002ED611 /* DetailsTableView.m in Sources */,
+				03BEC1AE1CE53163002ED611 /* DetailsCell.m in Sources */,
 				03419B261CE4FC9B00596239 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

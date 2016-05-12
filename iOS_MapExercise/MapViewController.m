@@ -19,6 +19,9 @@
 
 @implementation MapViewController
 
+
+#pragma mark - Initialization
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -42,6 +45,8 @@
     
 }
 
+#pragma mark - Map Gesture Recognizer
+
 - (void)createGestureRecognizer {
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
@@ -64,6 +69,8 @@
 }
 
 
+#pragma mark - MapKit Methods
+
 - (void)createPinWithLocation:(CLLocationCoordinate2D)location {
     [self removeLastAnnotation];
     
@@ -75,6 +82,16 @@
 
 - (void)removeLastAnnotation {
     [self.mapView removeAnnotation:self.mapView.annotations.lastObject];
+    
+}
+
+- (IBAction)showMyLocations:(id)sender {
+    [self performSegueWithIdentifier:@"showDetails" sender:self];
+}
+
+#pragma mark - Parse
+
+- (IBAction)savePinToParse:(id)sender {
     
 }
 
