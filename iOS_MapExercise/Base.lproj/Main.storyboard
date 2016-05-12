@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V4a-W6-bNI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="szm-w7-fIh">
+                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDP-gt-10K">
+                                <rect key="frame" x="300" y="64" width="300" height="57"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="fXK-UW-ywY"/>
+                                </constraints>
+                                <state key="normal" title="My Locations">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-m1-Tjp">
+                                <rect key="frame" x="0.0" y="64" width="300" height="57"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sDP-gt-10K" firstAttribute="leading" secondItem="0Sp-m1-Tjp" secondAttribute="trailing" id="0c8-1i-fls"/>
+                            <constraint firstItem="0Sp-m1-Tjp" firstAttribute="width" secondItem="sDP-gt-10K" secondAttribute="width" id="5gU-ym-JdV"/>
+                            <constraint firstItem="0Sp-m1-Tjp" firstAttribute="height" secondItem="sDP-gt-10K" secondAttribute="height" id="6if-vf-Tgm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sDP-gt-10K" secondAttribute="trailing" constant="-20" id="6xz-uM-DcY"/>
+                            <constraint firstItem="szm-w7-fIh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9RC-RF-3f6"/>
+                            <constraint firstItem="szm-w7-fIh" firstAttribute="top" secondItem="0Sp-m1-Tjp" secondAttribute="bottom" id="EF3-vO-aOG"/>
+                            <constraint firstItem="szm-w7-fIh" firstAttribute="top" secondItem="0Sp-m1-Tjp" secondAttribute="bottom" id="Kz9-8Q-knU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="szm-w7-fIh" secondAttribute="bottom" id="PMK-x2-6uV"/>
+                            <constraint firstItem="0Sp-m1-Tjp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="exk-l8-yGI"/>
+                            <constraint firstItem="sDP-gt-10K" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="fpj-aN-jAW"/>
+                            <constraint firstItem="sDP-gt-10K" firstAttribute="leading" secondItem="0Sp-m1-Tjp" secondAttribute="trailing" id="p9i-Rw-4ta"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="szm-w7-fIh" secondAttribute="trailing" constant="-20" id="sfL-ee-5AW"/>
+                            <constraint firstItem="0Sp-m1-Tjp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="z8S-iB-BL9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EF3-vO-aOG"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="du6-Zi-Ni3"/>
+                    <connections>
+                        <outlet property="mapView" destination="szm-w7-fIh" id="1Ka-TL-B8U"/>
+                        <outlet property="myLocationsButton" destination="sDP-gt-10K" id="ZPR-rh-bEv"/>
+                        <outlet property="saveLocationButton" destination="0Sp-m1-Tjp" id="sFQ-Nl-gJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1152" y="357"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s6P-X4-gID">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V4a-W6-bNI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tb4-AW-VDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lxc-iC-VoM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOD-9B-XrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="357"/>
         </scene>
     </scenes>
 </document>
