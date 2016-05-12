@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import <Parse/Parse.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *saveLocationButton;
 @property (weak, nonatomic) IBOutlet UIButton *myLocationsButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
