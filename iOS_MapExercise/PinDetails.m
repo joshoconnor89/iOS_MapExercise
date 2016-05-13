@@ -10,4 +10,8 @@
 
 @implementation PinDetails
 
+@synthesize latitude;
+@synthesize longitude;
+@synthesize address;
+
 @end

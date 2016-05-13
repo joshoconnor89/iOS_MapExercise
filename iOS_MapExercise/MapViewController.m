@@ -11,7 +11,9 @@
 #define METERS_PER_MILE 1609.344
 
 
-@interface MapViewController ()
+@interface MapViewController () {
+    PinDetails *pinDetails;
+}
 
 @property (nonatomic, assign) CLLocationCoordinate2D currentLocation;
 
@@ -45,7 +47,8 @@
     
 }
 
-#pragma mark - Map Gesture Recognizer
+
+#pragma mark - Gesture Recognizer
 
 - (void)createGestureRecognizer {
     
@@ -62,7 +65,7 @@
     CLLocationCoordinate2D location = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     self.currentLocation = location;
     
-    NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
+//    NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
     
     [self createPinWithLocation:location];
     
@@ -77,6 +80,7 @@
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
     [annotation setCoordinate:location];
     [self.mapView addAnnotation:annotation];
+    [self reverseGeolocatePinLocation:location];
     
 }
 
@@ -85,9 +89,44 @@
     
 }
 
+
+#pragma mark - Navigation
+
 - (IBAction)showMyLocations:(id)sender {
     [self performSegueWithIdentifier:@"showDetails" sender:self];
 }
+
+
+#pragma mark - Reverse Geolocation
+
+- (void)reverseGeolocatePinLocation:(CLLocationCoordinate2D)location  {
+    
+    CLLocation *locationToGeocode = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+    [geocoder reverseGeocodeLocation:locationToGeocode completionHandler:^(NSArray *placemarks, NSError *error){
+        CLPlacemark *placemark = placemarks[0];
+        NSString *fullAddress = [NSString stringWithFormat:@"%@, %@, %@, %@", placemark.name, placemark.locality, placemark.administrativeArea, placemark.postalCode];
+//        NSLog(@"Address: %@", fullAddress);
+        [self updatePinDetailsModel:fullAddress withLatitude:[NSNumber numberWithDouble:location.latitude] andLongitude:[NSNumber numberWithDouble:location.longitude]];
+    }];
+
+}
+
+
+#pragma mark - Object Model
+
+- (void) updatePinDetailsModel:(NSString *)address withLatitude:(NSNumber *)latitude andLongitude:(NSNumber *)longitude {
+
+    pinDetails = [[PinDetails alloc]init];
+    pinDetails.address = address;
+    pinDetails.latitude = latitude;
+    pinDetails.longitude = longitude;
+
+//    NSLog(@"%@", pinDetails);
+    
+}
+
 
 #pragma mark - Parse
 
