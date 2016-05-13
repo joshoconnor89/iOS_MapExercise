@@ -19,7 +19,6 @@
         if (error == nil){
             self.queryResponse = objects;
             [self requestSuccessful: objects];
-            NSLog(@"%@", [objects valueForKey:@"Address"]);
         }
         else{
             

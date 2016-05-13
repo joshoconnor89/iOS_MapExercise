@@ -60,8 +60,6 @@
     
     CLLocation *location = [locations lastObject];
     
-    //NSLog(@"lat: %f \n lon: %f", location.coordinate.latitude, location.coordinate.longitude);
-    
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = location.coordinate.latitude;
     zoomLocation.longitude= location.coordinate.longitude;
@@ -92,8 +90,6 @@
     CGPoint touchPoint = [sender locationInView:self.mapView];
     CLLocationCoordinate2D location = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     self.droppedPinLocation = location;
-    
-//    NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
     
     [self createPinWithLocation:location];
     
@@ -145,7 +141,6 @@
     [geocoder reverseGeocodeLocation:locationToGeocode completionHandler:^(NSArray *placemarks, NSError *error){
         CLPlacemark *placemark = placemarks[0];
         NSString *fullAddress = [NSString stringWithFormat:@"%@, %@, %@, %@", placemark.name, placemark.locality, placemark.administrativeArea, placemark.postalCode];
-//        NSLog(@"Address: %@", fullAddress);
         [self updatePinDetailsModel:fullAddress withLatitude:[NSNumber numberWithDouble:location.latitude] andLongitude:[NSNumber numberWithDouble:location.longitude]];
     }];
 
@@ -160,8 +155,6 @@
     pinDetails.latitude = latitude;
     pinDetails.longitude = longitude;
 
-//    NSLog(@"%@", pinDetails);
-    
 }
 
 
@@ -192,14 +185,6 @@
 }
 
 
-- (void)createTestObject {
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-    
-}
-
-
 #pragma mark - UI
 
 - (void)presentAlertControllerWithTitle: (NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle {
@@ -222,8 +207,6 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
-
-
 
 
 @end
