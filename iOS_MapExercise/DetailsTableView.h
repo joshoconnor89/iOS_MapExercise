@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailsCell.h"
+#import "PinsQuery.h"
 
-@interface DetailsTableView : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DetailsTableView : UIViewController <UITableViewDelegate, UITableViewDataSource, PinsQueryDelegate>
 
 @end

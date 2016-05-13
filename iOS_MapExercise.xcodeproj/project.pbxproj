@@ -17,6 +17,7 @@
 		03419B4D1CE4FC9B00596239 /* iOS_MapExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03419B4C1CE4FC9B00596239 /* iOS_MapExerciseUITests.m */; };
 		03BEC1AB1CE53104002ED611 /* DetailsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEC1AA1CE53104002ED611 /* DetailsTableView.m */; };
 		03BEC1AE1CE53163002ED611 /* DetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEC1AD1CE53163002ED611 /* DetailsCell.m */; };
+		03BEC1B21CE563AA002ED611 /* PinsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEC1B11CE563AA002ED611 /* PinsQuery.m */; };
 		03CED27E1CE50A1D00E9D39F /* PinDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED27D1CE50A1D00E9D39F /* PinDetails.m */; };
 		03CED2811CE50BDE00E9D39F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED2801CE50BDE00E9D39F /* MapViewController.m */; };
 		03CED2831CE50D5100E9D39F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CED2821CE50D5100E9D39F /* MapKit.framework */; };
@@ -60,6 +61,8 @@
 		03BEC1AA1CE53104002ED611 /* DetailsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableView.m; sourceTree = "<group>"; };
 		03BEC1AC1CE53163002ED611 /* DetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsCell.h; sourceTree = "<group>"; };
 		03BEC1AD1CE53163002ED611 /* DetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsCell.m; sourceTree = "<group>"; };
+		03BEC1B01CE563AA002ED611 /* PinsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinsQuery.h; sourceTree = "<group>"; };
+		03BEC1B11CE563AA002ED611 /* PinsQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinsQuery.m; sourceTree = "<group>"; };
 		03CED27C1CE50A1D00E9D39F /* PinDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinDetails.h; sourceTree = "<group>"; };
 		03CED27D1CE50A1D00E9D39F /* PinDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinDetails.m; sourceTree = "<group>"; };
 		03CED27F1CE50BDE00E9D39F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 				03CED2791CE5093100E9D39F /* Model */,
 				03CED27A1CE5093500E9D39F /* View */,
 				03CED27B1CE5093A00E9D39F /* Controller */,
+				03BEC1AF1CE5636D002ED611 /* ParseClient */,
 				03419B241CE4FC9B00596239 /* Supporting Files */,
 			);
 			path = iOS_MapExercise;
@@ -158,6 +162,15 @@
 				03419B4E1CE4FC9B00596239 /* Info.plist */,
 			);
 			path = iOS_MapExerciseUITests;
+			sourceTree = "<group>";
+		};
+		03BEC1AF1CE5636D002ED611 /* ParseClient */ = {
+			isa = PBXGroup;
+			children = (
+				03BEC1B01CE563AA002ED611 /* PinsQuery.h */,
+				03BEC1B11CE563AA002ED611 /* PinsQuery.m */,
+			);
+			name = ParseClient;
 			sourceTree = "<group>";
 		};
 		03CED2791CE5093100E9D39F /* Model */ = {
@@ -397,6 +410,7 @@
 				03419B291CE4FC9B00596239 /* AppDelegate.m in Sources */,
 				03BEC1AB1CE53104002ED611 /* DetailsTableView.m in Sources */,
 				03BEC1AE1CE53163002ED611 /* DetailsCell.m in Sources */,
+				03BEC1B21CE563AA002ED611 /* PinsQuery.m in Sources */,
 				03419B261CE4FC9B00596239 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
