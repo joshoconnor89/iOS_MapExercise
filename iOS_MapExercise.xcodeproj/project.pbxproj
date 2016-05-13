@@ -21,6 +21,7 @@
 		03BEC1B61CE5774E002ED611 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1B31CE5774E002ED611 /* house.png */; };
 		03BEC1B71CE5774E002ED611 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1B41CE5774E002ED611 /* location.png */; };
 		03BEC1B81CE5774E002ED611 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1B51CE5774E002ED611 /* time.png */; };
+		03BEC1BA1CE57A48002ED611 /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1B91CE57A48002ED611 /* applogo.png */; };
 		03CED27E1CE50A1D00E9D39F /* PinDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED27D1CE50A1D00E9D39F /* PinDetails.m */; };
 		03CED2811CE50BDE00E9D39F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED2801CE50BDE00E9D39F /* MapViewController.m */; };
 		03CED2831CE50D5100E9D39F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CED2821CE50D5100E9D39F /* MapKit.framework */; };
@@ -69,6 +70,7 @@
 		03BEC1B31CE5774E002ED611 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = house.png; path = ../../house.png; sourceTree = "<group>"; };
 		03BEC1B41CE5774E002ED611 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = ../../location.png; sourceTree = "<group>"; };
 		03BEC1B51CE5774E002ED611 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = time.png; path = ../../time.png; sourceTree = "<group>"; };
+		03BEC1B91CE57A48002ED611 /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applogo.png; path = ../../applogo.png; sourceTree = "<group>"; };
 		03CED27C1CE50A1D00E9D39F /* PinDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinDetails.h; sourceTree = "<group>"; };
 		03CED27D1CE50A1D00E9D39F /* PinDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinDetails.m; sourceTree = "<group>"; };
 		03CED27F1CE50BDE00E9D39F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				03BEC1B31CE5774E002ED611 /* house.png */,
 				03BEC1B41CE5774E002ED611 /* location.png */,
 				03BEC1B51CE5774E002ED611 /* time.png */,
+				03BEC1B91CE57A48002ED611 /* applogo.png */,
 				03419B331CE4FC9B00596239 /* Assets.xcassets */,
 				03419B251CE4FC9B00596239 /* main.m */,
 			);
@@ -343,6 +346,7 @@
 				03BEC1B81CE5774E002ED611 /* time.png in Resources */,
 				03BEC1B71CE5774E002ED611 /* location.png in Resources */,
 				03419B341CE4FC9B00596239 /* Assets.xcassets in Resources */,
+				03BEC1BA1CE57A48002ED611 /* applogo.png in Resources */,
 				03419B2F1CE4FC9B00596239 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

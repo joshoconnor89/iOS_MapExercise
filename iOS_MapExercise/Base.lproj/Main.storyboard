@@ -113,20 +113,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-0p-W2G">
-                                                    <rect key="frame" x="48" y="23" width="529" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="45" y="23" width="537" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-R3-oqB">
-                                                    <rect key="frame" x="48" y="59" width="529" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-R3-oqB">
+                                                    <rect key="frame" x="45" y="59" width="537" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yb-fC-2MC">
-                                                    <rect key="frame" x="48" y="95" width="529" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="45" y="93" width="537" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -138,14 +138,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house.png" translatesAutoresizingMaskIntoConstraints="NO" id="WPk-re-IQ6">
-                                                    <rect key="frame" x="11" y="57" width="25" height="25"/>
+                                                    <rect key="frame" x="11" y="56" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="I7Q-ZF-Ue8"/>
                                                         <constraint firstAttribute="height" constant="25" id="ZLL-LZ-7VS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.png" translatesAutoresizingMaskIntoConstraints="NO" id="hsp-Gp-TAM">
-                                                    <rect key="frame" x="11" y="93" width="25" height="25"/>
+                                                    <rect key="frame" x="11" y="90" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="A05-dI-rJ2"/>
                                                         <constraint firstAttribute="width" constant="25" id="Uqq-Ec-WJd"/>
@@ -157,18 +157,18 @@
                                                 <constraint firstItem="WPk-re-IQ6" firstAttribute="centerY" secondItem="qJw-R3-oqB" secondAttribute="centerY" id="HE7-W7-4M1"/>
                                                 <constraint firstItem="qPb-0p-W2G" firstAttribute="top" secondItem="WLv-LE-ZMb" secondAttribute="topMargin" constant="15" id="KM0-2m-Jx2"/>
                                                 <constraint firstItem="hsp-Gp-TAM" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="3" id="MXl-yQ-IyB"/>
-                                                <constraint firstItem="qPb-0p-W2G" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="40" id="Oms-up-iEG"/>
+                                                <constraint firstItem="qPb-0p-W2G" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="37" id="Oms-up-iEG"/>
                                                 <constraint firstItem="dag-Na-M24" firstAttribute="centerY" secondItem="qPb-0p-W2G" secondAttribute="centerY" id="TeN-B4-mKn"/>
                                                 <constraint firstItem="dag-Na-M24" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="3" id="VC1-sg-bKr"/>
                                                 <constraint firstItem="hsp-Gp-TAM" firstAttribute="centerY" secondItem="8yb-fC-2MC" secondAttribute="centerY" id="VI1-0h-YJ7"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8yb-fC-2MC" secondAttribute="trailing" constant="15" id="WJP-VT-xv3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8yb-fC-2MC" secondAttribute="trailing" constant="10" id="WJP-VT-xv3"/>
                                                 <constraint firstItem="qJw-R3-oqB" firstAttribute="top" secondItem="qPb-0p-W2G" secondAttribute="bottom" constant="15" id="dGZ-c4-AjA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qPb-0p-W2G" secondAttribute="trailing" constant="15" id="fjm-45-Hwn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qPb-0p-W2G" secondAttribute="trailing" constant="10" id="fjm-45-Hwn"/>
                                                 <constraint firstItem="dag-Na-M24" firstAttribute="top" secondItem="WLv-LE-ZMb" secondAttribute="topMargin" constant="13" id="niR-ik-WZc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qJw-R3-oqB" secondAttribute="trailing" constant="15" id="tg2-6I-XMb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qJw-R3-oqB" secondAttribute="trailing" constant="10" id="tg2-6I-XMb"/>
                                                 <constraint firstItem="WPk-re-IQ6" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="3" id="us6-xV-H4d"/>
-                                                <constraint firstItem="qJw-R3-oqB" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="40" id="ws0-LC-vzl"/>
-                                                <constraint firstItem="8yb-fC-2MC" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="40" id="y1M-Sa-y8I"/>
+                                                <constraint firstItem="qJw-R3-oqB" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="37" id="ws0-LC-vzl"/>
+                                                <constraint firstItem="8yb-fC-2MC" firstAttribute="leading" secondItem="WLv-LE-ZMb" secondAttribute="leadingMargin" constant="37" id="y1M-Sa-y8I"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

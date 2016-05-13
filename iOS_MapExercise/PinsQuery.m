@@ -14,7 +14,7 @@
 -(void)fetchPinObject{
     PFQuery *query = [PFQuery queryWithClassName:@"Pin"];
     [query selectKeys:@[@"Address", @"Latitude", @"Longitude"]];
-    [query orderByAscending:@"createdAt"];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error == nil){
             self.queryResponse = objects;
