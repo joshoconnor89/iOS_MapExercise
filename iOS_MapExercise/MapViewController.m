@@ -13,9 +13,10 @@
 
 @interface MapViewController () {
     PinDetails *pinDetails;
+    CLLocationManager *locationManager;
 }
 
-@property (nonatomic, assign) CLLocationCoordinate2D currentLocation;
+@property (nonatomic, assign) CLLocationCoordinate2D droppedPinLocation;
 
 @end
 
@@ -29,17 +30,34 @@
 
     [self createGestureRecognizer];
     self.mapView.delegate = self;
+    pinDetails = [[PinDetails alloc]init];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+        [locationManager requestWhenInUseAuthorization];
+    
+    [locationManager startUpdatingLocation];
     
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    
+    CLLocation *location = [locations lastObject];
+    
+    //NSLog(@"lat: %f \n lon: %f", location.coordinate.latitude, location.coordinate.longitude);
+    
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 39.281516;
-    zoomLocation.longitude= -76.580806;
+    zoomLocation.latitude = location.coordinate.latitude;
+    zoomLocation.longitude= location.coordinate.longitude;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-    [_mapView setRegion:viewRegion animated:YES];
-    
+    [self.mapView setRegion:viewRegion animated:YES];
+    [locationManager stopUpdatingLocation];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +81,7 @@
     
     CGPoint touchPoint = [sender locationInView:self.mapView];
     CLLocationCoordinate2D location = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
-    self.currentLocation = location;
+    self.droppedPinLocation = location;
     
 //    NSLog(@"Location found from Map: %f %f",location.latitude,location.longitude);
     
@@ -72,7 +90,7 @@
 }
 
 
-#pragma mark - MapKit Methods
+#pragma mark - MapKit
 
 - (void)createPinWithLocation:(CLLocationCoordinate2D)location {
     [self removeLastAnnotation];
@@ -87,6 +105,16 @@
 - (void)removeLastAnnotation {
     [self.mapView removeAnnotation:self.mapView.annotations.lastObject];
     
+}
+
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id ) annotation
+{
+    MKPinAnnotationView *newAnnotation = [[MKPinAnnotationView alloc] init];
+    newAnnotation.pinTintColor = [UIColor blueColor];
+    newAnnotation.animatesDrop = YES;
+    newAnnotation.canShowCallout = NO;
+    [newAnnotation setSelected:YES animated:YES];
+    return newAnnotation;
 }
 
 
@@ -118,7 +146,6 @@
 
 - (void) updatePinDetailsModel:(NSString *)address withLatitude:(NSNumber *)latitude andLongitude:(NSNumber *)longitude {
 
-    pinDetails = [[PinDetails alloc]init];
     pinDetails.address = address;
     pinDetails.latitude = latitude;
     pinDetails.longitude = longitude;

@@ -55,15 +55,19 @@
                             <constraint firstItem="szm-w7-fIh" firstAttribute="top" secondItem="0Sp-m1-Tjp" secondAttribute="bottom" id="EF3-vO-aOG"/>
                             <constraint firstItem="szm-w7-fIh" firstAttribute="top" secondItem="0Sp-m1-Tjp" secondAttribute="bottom" id="Kz9-8Q-knU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="szm-w7-fIh" secondAttribute="bottom" id="PMK-x2-6uV"/>
+                            <constraint firstItem="sDP-gt-10K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="V4B-JG-rQQ"/>
                             <constraint firstItem="0Sp-m1-Tjp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="exk-l8-yGI"/>
                             <constraint firstItem="sDP-gt-10K" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="fpj-aN-jAW"/>
                             <constraint firstItem="sDP-gt-10K" firstAttribute="leading" secondItem="0Sp-m1-Tjp" secondAttribute="trailing" id="p9i-Rw-4ta"/>
+                            <constraint firstItem="0Sp-m1-Tjp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qcM-WY-ETo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="szm-w7-fIh" secondAttribute="trailing" constant="-20" id="sfL-ee-5AW"/>
                             <constraint firstItem="0Sp-m1-Tjp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="z8S-iB-BL9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="z8S-iB-BL9"/>
                                 <exclude reference="EF3-vO-aOG"/>
+                                <exclude reference="fpj-aN-jAW"/>
                             </mask>
                         </variation>
                     </view>
