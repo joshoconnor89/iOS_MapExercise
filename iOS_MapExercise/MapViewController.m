@@ -29,9 +29,21 @@
     [super viewDidLoad];
 
     [self createGestureRecognizer];
+    [self initiateLocationManager];
     self.mapView.delegate = self;
     pinDetails = [[PinDetails alloc]init];
     
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
+
+
+#pragma mark - Location Manager
+
+- (void)initiateLocationManager {
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -41,7 +53,6 @@
         [locationManager requestWhenInUseAuthorization];
     
     [locationManager startUpdatingLocation];
-    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
@@ -58,11 +69,6 @@
     [self.mapView setRegion:viewRegion animated:YES];
     [locationManager stopUpdatingLocation];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
 }
 
 
@@ -159,7 +165,28 @@
 
 - (IBAction)savePinToParse:(id)sender {
     
+    if (pinDetails.address != nil){
+        PFObject *pinObject = [PFObject objectWithClassName:@"Pin"];
+        pinObject[@"Address"] = pinDetails.address;
+        pinObject[@"Latitude"] = pinDetails.latitude;
+        pinObject[@"Longitude"] = pinDetails.longitude;
+        [pinObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+            if (succeeded) {
+                [self presentAlertControllerWithTitle:@"Success!" message:@"Your pin's location was saved." actionTitle:@"Ok"];
+                
+            } else {
+                
+                [self presentAlertControllerWithTitle:@"Error!" message:@"Your pin's location could not be saved." actionTitle:@"Ok"];
+            }
+        }];
+    }
+    
+    else{
+        [self presentAlertControllerWithTitle:@"Error!" message:@"Your pin's location could not be saved.  Make sure that there is a valid pin on the map before saving." actionTitle:@"Ok"];
+    }
 }
+
 
 - (void)createTestObject {
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
@@ -167,5 +194,32 @@
     [testObject saveInBackground];
     
 }
+
+
+#pragma mark - UI
+
+- (void)presentAlertControllerWithTitle: (NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle {
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:title
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction* action = [UIAlertAction
+                               actionWithTitle:actionTitle
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action)
+                               {
+                                   [alert dismissViewControllerAnimated:YES completion:nil];
+                                   
+                               }];
+    
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+
 
 @end
