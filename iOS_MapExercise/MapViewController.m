@@ -71,6 +71,9 @@
 
 }
 
+- (IBAction)refreshCurrentLocation:(id)sender {
+    [self initiateLocationManager];
+}
 
 #pragma mark - Gesture Recognizer
 

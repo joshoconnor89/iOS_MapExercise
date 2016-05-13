@@ -71,7 +71,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="du6-Zi-Ni3"/>
+                    <navigationItem key="navigationItem" id="du6-Zi-Ni3">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="iDM-Fm-6x0">
+                            <connections>
+                                <action selector="refreshCurrentLocation:" destination="BYZ-38-t0r" id="HcX-Ev-OmK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="szm-w7-fIh" id="1Ka-TL-B8U"/>
                         <outlet property="myLocationsButton" destination="sDP-gt-10K" id="ZPR-rh-bEv"/>
