@@ -20,11 +20,11 @@
 		03BEC1B21CE563AA002ED611 /* PinsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEC1B11CE563AA002ED611 /* PinsQuery.m */; };
 		03BEC1C71CE580BD002ED611 /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1C31CE580BD002ED611 /* applogo.png */; };
 		03BEC1C81CE580BD002ED611 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1C41CE580BD002ED611 /* house.png */; };
-		03BEC1C91CE580BD002ED611 /* location 20-25-32-369.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1C51CE580BD002ED611 /* location 20-25-32-369.png */; };
 		03BEC1CA1CE580BD002ED611 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BEC1C61CE580BD002ED611 /* time.png */; };
 		03CED27E1CE50A1D00E9D39F /* PinDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED27D1CE50A1D00E9D39F /* PinDetails.m */; };
 		03CED2811CE50BDE00E9D39F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED2801CE50BDE00E9D39F /* MapViewController.m */; };
 		03CED2831CE50D5100E9D39F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CED2821CE50D5100E9D39F /* MapKit.framework */; };
+		03F4A8061CE581DF00463F99 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F4A8051CE581DF00463F99 /* location.png */; };
 		BEB210719486247E6472A7F5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7722F54394F2041717B98B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,13 +69,13 @@
 		03BEC1B11CE563AA002ED611 /* PinsQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinsQuery.m; sourceTree = "<group>"; };
 		03BEC1C31CE580BD002ED611 /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
 		03BEC1C41CE580BD002ED611 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
-		03BEC1C51CE580BD002ED611 /* location 20-25-32-369.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location 20-25-32-369.png"; sourceTree = "<group>"; };
 		03BEC1C61CE580BD002ED611 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		03CED27C1CE50A1D00E9D39F /* PinDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinDetails.h; sourceTree = "<group>"; };
 		03CED27D1CE50A1D00E9D39F /* PinDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinDetails.m; sourceTree = "<group>"; };
 		03CED27F1CE50BDE00E9D39F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		03CED2801CE50BDE00E9D39F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		03CED2821CE50D5100E9D39F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		03F4A8051CE581DF00463F99 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		1C68C8BB472F24FB02EC7F90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2023214BBB8A4D398BC5AD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DF7722F54394F2041717B98B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +150,7 @@
 				03419B381CE4FC9B00596239 /* Info.plist */,
 				03BEC1C31CE580BD002ED611 /* applogo.png */,
 				03BEC1C41CE580BD002ED611 /* house.png */,
-				03BEC1C51CE580BD002ED611 /* location 20-25-32-369.png */,
+				03F4A8051CE581DF00463F99 /* location.png */,
 				03BEC1C61CE580BD002ED611 /* time.png */,
 				03419B331CE4FC9B00596239 /* Assets.xcassets */,
 				03419B251CE4FC9B00596239 /* main.m */,
@@ -343,9 +343,9 @@
 			files = (
 				03BEC1C71CE580BD002ED611 /* applogo.png in Resources */,
 				03419B371CE4FC9B00596239 /* LaunchScreen.storyboard in Resources */,
-				03BEC1C91CE580BD002ED611 /* location 20-25-32-369.png in Resources */,
 				03BEC1C81CE580BD002ED611 /* house.png in Resources */,
 				03419B341CE4FC9B00596239 /* Assets.xcassets in Resources */,
+				03F4A8061CE581DF00463F99 /* location.png in Resources */,
 				03BEC1CA1CE580BD002ED611 /* time.png in Resources */,
 				03419B2F1CE4FC9B00596239 /* Main.storyboard in Resources */,
 			);
