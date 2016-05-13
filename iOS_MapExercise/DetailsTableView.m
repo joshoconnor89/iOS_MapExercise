@@ -29,6 +29,7 @@
     [super viewDidLoad];
     
     [self showActivityViewer];
+    self.navigationItem.title = @"Pins";
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

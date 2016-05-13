@@ -32,6 +32,7 @@
     [self initiateLocationManager];
     self.mapView.delegate = self;
     pinDetails = [[PinDetails alloc]init];
+    self.navigationItem.title = @"Map";
     
 }
 
