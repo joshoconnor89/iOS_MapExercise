@@ -1,2 +1,4 @@
 platform :ios, '8.0'
-pod 'Parse'
+target "iOS_MapExercise" do
+    pod 'Parse'
+end
